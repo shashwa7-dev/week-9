@@ -15,7 +15,7 @@ jobs:
       - name: SSH and deploy
         uses: appleboy/ssh-action@master
         with:
-          host: ${{ ec2-3-17-159-1.us-east-2.compute.amazonaws.com }}  
+          host: "ec2-3-17-159-1.us-east-2.compute.amazonaws.com"  
           key: ${{ secrets.AWS_SSH_PK }}  
         env:
           SSH_PRIVATE_KEY: ${{ secrets.AWS_SSH_PK }}
