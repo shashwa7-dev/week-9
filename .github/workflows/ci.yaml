@@ -15,9 +15,9 @@ jobs:
 
       - name: SSH and deploy
         env:
-          AWS_SSH_PK: ${{ secrets.AWS_SSH_PK }}
+          SSH_PRIVATE_KEY: ${{ secrets.SSH_PRIVATE_KEY }}
         run: |
-          echo "$AWS_SSH_PK" > keyfile
+          echo "$SSH_PRIVATE_KEY" > keyfile
           chmod 600 keyfile
           mkdir -p ~/.ssh
           cp known_hosts ~/.ssh/known_hosts
