@@ -9,7 +9,7 @@ const app = express();
 app.use(cors());
 app.use(express.json());
 
-app.get("/", (req, res) => res.send("Hello Course App! V2"));
+app.get("/", (req, res) => res.send("Hello Course App! V3"));
 app.use("/admin", adminRouter);
 app.use("/user", userRouter);
 
